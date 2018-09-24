@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.IO;
 using System.Linq;
+using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumFirst
 {
@@ -115,8 +116,15 @@ namespace SeleniumFirst
             driver.FindElement(By.Id("input-city")).Clear();
             driver.FindElement(By.Id("input-city")).SendKeys("Lviv");
 
+  
+
             driver.FindElement(By.Id("input-country")).SendKeys("Ukraine");
             Thread.Sleep(2000);
+            //WebDriverWait driverWait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            //driverWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.
+            //    TextToBePresentInElement(driver.
+            //    FindElement(By.Id("input-zone")),
+            //           "Kyiv"));
             driver.FindElement(By.Id("input-zone")).SendKeys("Kyiv");
 
             driver.FindElement(By.CssSelector("input.btn.btn-primary")).Click();
