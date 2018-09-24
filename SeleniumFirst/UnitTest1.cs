@@ -26,7 +26,7 @@ namespace SeleniumFirst
         {
             //users = DataReader.LoadJson();
             driver = new ChromeDriver();           
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             NUnit.Framework.Assert.AreEqual(LogIn(email, password), true );
         }
 
@@ -69,6 +69,7 @@ namespace SeleniumFirst
         private bool LogIn(string email, string password)
         {
             driver.Navigate().GoToUrl("http://atqc-shop.epizy.com/index.php?route=account/login");
+
             driver.FindElement(By.Id("input-email")).Click();
             driver.FindElement(By.Id("input-email")).Clear();
             driver.FindElement(By.Id("input-email")).SendKeys(email);
@@ -124,7 +125,7 @@ namespace SeleniumFirst
         private void LogOut()
         {
             driver.FindElement(By.XPath("//a[@title ='My Account']")).Click();
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             driver.FindElement(By.XPath("//ul[@class='dropdown-menu dropdown-menu-right']/li[last()]")).Click();
             Thread.Sleep(2000);
         }
