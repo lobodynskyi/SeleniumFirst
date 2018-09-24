@@ -1,0 +1,21 @@
+﻿{
+  "Users": [
+    {
+      "firstname": "Nazar",
+      "lastname": "Lobodynskyi",
+      "address": "Stryjska",
+      "city": "Lviv",
+      "country": "Ukraine",
+      "zone": "Kyiv"
+    },
+    {
+      "firstName": "Oksana",
+      "lastName": "Vesela",
+      "address": "Stepana Banderu, 10",
+      "city": "Lviv",
+      "postCode": "79000",
+      "country": "Ukraine",
+      "region": "L'vivs'ka Oblast'"
+    }
+  ]
+}
